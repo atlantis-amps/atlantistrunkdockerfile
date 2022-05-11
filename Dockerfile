@@ -22,7 +22,7 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 COPY /atlantis /app/atlantis
 
 RUN gcc -v
-RUN cd /app/atlantis/trunk/atlantis aclocal && autoheader && autoconf && automake -a && ./configure && make && make install
+RUN cd /app/atlantis/atlantis aclocal && autoheader && autoconf && automake -a && ./configure && make && make install
 
 
 #set date and timezone
